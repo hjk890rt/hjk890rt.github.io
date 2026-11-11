@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern HTML Document</title>
+  
+  <!-- Preconnecting to assets for better performance -->
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Modern JS module layout (deferred by default) -->
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+
+  <!-- Accessible Navigation & Header -->
+  <header>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <nav aria-label="Main Navigation">
+      <div class="logo">Brand</div>
+      <ul>
+        <li><a href="/" aria-current="page">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><button popovertarget="info-popover">Quick Info</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Native HTML Popover API Element -->
+  <div id="info-popover" popover>
+    <p>This is a native HTML popover that doesn't require JavaScript!</p>
+  </div>
+
+  <!-- Main Layout -->
+  <main id="main-content">
+    
+    <!-- Hero Section with Responsive Image Layout -->
+    <section class="hero">
+      <h1>The Era of Semantic Web</h1>
+      <p>Building high-performance, accessible sites using native elements.</p>
+      <button onclick="document.getElementById('contact-dialog').showModal()">Get in Touch</button>
+    </section>
+
+    <!-- Content Sections utilizing semantic landmarks -->
+    <section class="features">
+      <h2>Core Features</h2>
+      <div class="grid">
+        <article>
+          <h3>Performance First</h3>
+          <p>Native components reduce asset weight dramatically.</p>
+        </article>
+        <article>
+          <h3>Built-in Accessibility</h3>
+          <p>Semantic structuring natively maps to assistive technologies.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Accessible Native Dialog / Modal Box -->
+  <dialog id="contact-dialog">
+    <form method="dialog">
+      <h3>Contact Us</h3>
+      <p>Submit your details or close the panel.</p>
+      <button type="submit" value="close">Close</button>
+    </form>
+  </dialog>
+
+  <!-- Modern Semantic Footer -->
+  <footer>
+    <p>&copy; 2026 Your Enterprise. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
